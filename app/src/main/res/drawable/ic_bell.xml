@@ -1,0 +1,13 @@
+<!-- Icon nhỏ trên thanh thông báo: phải là hình đơn sắc trên nền trong suốt. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:pathData="M6,9a6,6 0,0 1,12 0v4l2,3H4l2,-3z M10,19a2,2 0,0 0,4 0"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

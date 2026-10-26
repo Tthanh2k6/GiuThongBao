@@ -1,0 +1,19 @@
+# Build
+/build/
+/app/build/
+/.gradle/
+/.kotlin/
+local.properties
+
+# APK output (giữ thủ công nếu cần)
+*.apk
+*.idsig
+
+# IDE
+/.idea/
+*.iml
+.DS_Store
+
+# Reverse-engineering artifacts (không commit)
+/capture/
+/samples/

@@ -1,0 +1,27 @@
+<!-- Vùng hiển thị của adaptive icon là ~72dp giữa khung 108dp; tỉ lệ theo app icon trong file thiết kế. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#1FFFD60A"
+        android:pathData="M32,54a22,22 0,1 0,44 0a22,22 0,1 0,-44 0z" />
+    <group
+        android:translateX="36"
+        android:translateY="36"
+        android:scaleX="1.5"
+        android:scaleY="1.5">
+        <path
+            android:pathData="M6,9a6,6 0,0 1,12 0v4l2,3H4l2,-3z M10,19a2,2 0,0 0,4 0"
+            android:strokeColor="#FFFFD60A"
+            android:strokeWidth="1.2"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round" />
+    </group>
+    <path
+        android:fillColor="#FF32D74B"
+        android:strokeColor="#FF1A1A1D"
+        android:strokeWidth="2"
+        android:pathData="M63,39a5,5 0,1 0,10 0a5,5 0,1 0,-10 0z" />
+</vector>
