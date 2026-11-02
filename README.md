@@ -15,7 +15,7 @@
 
 **GiuThongBao (`vn.trungthanh.giuthongbao`)** is a native Android utility written in **Kotlin + Jetpack Compose** designed to prevent delayed or dropped push notifications on aggressive Chinese OEM ROMs (especially **Xiaomi HyperOS China ROM** and **MIUI**).
 
-> **Privacy by Design:** Despite the name (*"Keep Notifications"*), this app **does NOT use `NotificationListenerService`** and never reads, intercepts, or stores notification contents. Instead, it keeps the underlying **Google Firebase Cloud Messaging (FCM / MCS `mtalk.google.com:5228`)** TCP socket alive.
+> **Privacy by Design:** Despite the name (*"Keep Notifications"*), this app **does NOT use `NotificationListenerService`** and never reads, intercepts, or stores notification contents. Instead, it periodically nudges Google Play Services to refresh its **Firebase Cloud Messaging (FCM / MCS `mtalk.google.com:5228`)** connection by broadcasting the heartbeat intents described below. It cannot see the socket itself, so it does not verify that the connection is up; whether this helps depends on the ROM and Play Services version (tested by the author on one Xiaomi phone, no measurements published).
 
 ---
 
@@ -23,7 +23,7 @@
 
 On aggressive OEM battery-saver ROMs, background freezer mechanisms frequently sever Google Play Services' (`com.google.android.gms`) persistent TCP connection to `mtalk.google.com:5228` during Wi-Fi ↔ 4G/5G handoffs or deep sleep without scheduling a reconnect alarm.
 
-**GiuThongBao** solves this through a 3-pronged wake & heartbeat architecture:
+**GiuThongBao** tries to work around this with three triggers:
 
 ```mermaid
 flowchart LR
