@@ -17,3 +17,5 @@ local.properties
 # Reverse-engineering artifacts (không commit)
 /capture/
 /samples/
+agent.md
+CODEBASE.md
